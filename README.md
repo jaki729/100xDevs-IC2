@@ -1,5 +1,3 @@
-Certainly! Here's a sample README file for your project:
-
 ---
 
 # 100xDevs-IC2
@@ -10,24 +8,7 @@ Welcome to 100xDevs-IC2! This repository is designed to help you learn the basic
 To complement this repository, we have a dedicated course available for you [here](https://harkirat.classx.co.in/new-courses/8-live-0-100-complete). This course covers essential concepts aligned with this repository's content, providing a comprehensive learning experience.
 
 ## About
-This repository is structured to guide you through various stages of learning, from fundamental concepts to advanced topics. Here's what you can expect:
-
-### Learning Tracks
-1. **MERN Stack**
-   - MongoDB
-   - Express.js
-   - React
-   - Node.js
-
-2. **DevOps**
-   - Basics to Advanced DevOps practices
-
-3. **System Design**
-   - Strategies and methodologies for designing systems
-
-### Projects
-You'll be actively engaged in building three projects to apply your newfound knowledge and skills practically.
-
+This repository is structured to guide you through various stages of learning, from fundamental concepts to advanced topics. 
 ## Getting Started
 To begin your learning journey, follow these steps:
 
