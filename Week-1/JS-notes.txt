@@ -1,0 +1,39 @@
+Applications->Languages->compiler->byte code->computer(ram/ssd)
+Compiled Languages compile then run,usually do not compile if there is an error in the code
+But JS is different it is interpreted language line by line , can run partially if the error comes later.
+So when you write a program and make some mistakes,JS will still try to execute that part of your code even though its incorrect because it thinks it.
+
+Static(strict-C++,GOLAG) vs Dynamic languages(JS)
+Static type language like C++
+1. In Static Language like C++ or Java you have to declare all variables before using them and they are type checked at compile time.
+2. In static type checking you have to declare all variables and their types before using them. This means that you need to know what kind of data will be.
+Dynamic typed Languages like JS
+1. No need to declare variable type at compile time
+2. Can change data type of a variable during runtime
+3. More flexible and faster development
+4. Easier debugging (no strict type checking)  
+5. Better for prototyping
+
+Single Threaded nature of JS: Always dedicated to one core of the processor
+A single thread that executes instructions one after another without any interruption.
+JS operate on a single thread, executing one operation at a time. 
+Node. js, being non-blocking and event-driven, can handle many concurrent connections with minimal overhead.
+Bad for scalable systems.
+MultiThreaded nature of JS: it can have extended threads that does not mean MultiThreaded
+Each thread runs on its own stack which contains all variables local to that thread.
+Whenever a function is called from main thread, it gets pushed onto the call stack of the main thread.
+
+Arrays in JS:
+An array object consists of elements stored in contiguous memory locations.
+The length property gives us access to the number of elements present in the array.
+
+Objects in JS:
+Object are collection of key value pairs where each key has a unique name associated with a value.
+Key names are strings and values can be anything i.e., numbers, string or even objects.
+
+Funtions in JS:
+1. Abstract out logic in your program
+2. Take arguments as an input 
+3. Return a value as an output
+4. Its a independent program that is supported to do something given as an input
+5. Funtions can take other functions as input //callbacks
