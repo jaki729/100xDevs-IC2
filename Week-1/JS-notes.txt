@@ -37,3 +37,18 @@ Funtions in JS:
 3. Return a value as an output
 4. Its a independent program that is supported to do something given as an input
 5. Funtions can take other functions as input //callbacks
+
+objects in js
+- a collection of properties (key value pairs)
+- methods : functions attached to the object
+
+Classes in JS
+- A class is simply a blueprint for creating objects.
+- It defines a new category of objects.
+- An object is created from a class using the new keyword.
+- it is a blueprint for creating objects (a particular data structure), providing initial values for its properties and methods
+
+Static Funtions in JS:
+These are functions that belong to the class rather than instances of the class. They’re called on the class itself, rather than instances of the Classes.
+Static methods are not associated to any objects. It is associated to the class itself.
+
