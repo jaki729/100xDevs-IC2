@@ -26,3 +26,5 @@ function dateMethods() {
 
 // Example Usage for Date Methods
 dateMethods();
+
+// Date is the premade , its the class and created a new object for it
