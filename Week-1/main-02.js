@@ -129,3 +129,10 @@ function findSumTill100() {
 }
 setTimeout(findSum(100))
 console.log("hello js");
+
+// introduce the async fs.readFile 
+const fs = require('fs');
+fs.readFile("a.txt","utf-8",function(err,data) {
+    console.log(data);
+});
+console.log("This is a message");
