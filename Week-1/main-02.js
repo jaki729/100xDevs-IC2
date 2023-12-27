@@ -115,3 +115,17 @@ function greetAlien() {
 }
 setTimeout(greet, 3*1000);
 setInterval(greetAlien,2*1000);
+
+// introduce a asynchronous function using setTimeout
+function findSum(n) {
+    let ans=0;
+    for (let i=0; i<n; i++) {
+        ans +=i;
+    }
+    return ans;
+}
+function findSumTill100() {
+    console.log(findSum(100));
+}
+setTimeout(findSum(100))
+console.log("hello js");

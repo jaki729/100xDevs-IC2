@@ -51,4 +51,48 @@ Classes in JS
 Static Funtions in JS:
 These are functions that belong to the class rather than instances of the class. They’re called on the class itself, rather than instances of the Classes.
 Static methods are not associated to any objects. It is associated to the class itself.
+They are used to create utility functions/methods that belong to the class rather than instances of the class.
+They can be called directly by the Class Name rather than the Object.
 
+callback functions in js:
+Functions in JS:A set of statements that performs a task or calculates a value. It should take some input and return an output where there is some obvious relationship between the input and the output.Callback functions passing functions as arguments
+// Simple function example
+function square(n) {    
+    return n*n;
+}
+
+function sumofsquares(a,b) {
+    const val1 = square(a);
+    const val2 = square(b);
+    return val1+val2;
+}
+const ans = sumofsquares(2, 2)
+console.log(ans)
+
+// Callback Function Example
+function square(a) {
+    return a*a;
+}
+
+function sumofsomething(a,b,fn) {
+    console.log(fn);
+    const val1 = square(a);
+    const val2 = square(b);
+    return val1+val2;
+}
+sumofsquares(a, b,square);
+// Anonymous Function
+function sumofsomething(a,b,fn){
+    const val1=fn(a);
+    const val2=fn(b);
+    return val1+val2;
+}
+sumofsomething(a,b,function(a)){
+    return a*a;
+}
+
+Synchronous : 
+Together, one after the other, sequential, only one thing is happening at a time.
+Asynchonous :
+Opposite of Synchronous, happens in parts, multiple things are context switching with each other.
+example: setTimeout, fs.readFile, Fetch
