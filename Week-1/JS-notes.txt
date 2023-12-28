@@ -96,3 +96,7 @@ Together, one after the other, sequential, only one thing is happening at a time
 Asynchonous :
 Opposite of Synchronous, happens in parts, multiple things are context switching with each other.
 example: setTimeout, fs.readFile, Fetch
+We need callbacks in Asynchonous function
+Promises :
+A Promise object represents the eventual completion or failure of an asynchronous operation and its resulting value. 
+Once in this state, a promise cannot change back to Pending (0). It will either become fulfilled or rejected.
