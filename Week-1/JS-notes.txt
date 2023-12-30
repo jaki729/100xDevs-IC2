@@ -100,3 +100,35 @@ We need callbacks in Asynchonous function
 Promises :
 A Promise object represents the eventual completion or failure of an asynchronous operation and its resulting value. 
 Once in this state, a promise cannot change back to Pending (0). It will either become fulfilled or rejected.
+
+// Example for promise
+const fs = require('fs');
+// asynchronous function
+function readFile() {
+    console.log("inside readFile");
+    return new Promise(function(resolve) {
+        console.log("inside promise");
+        fs.readFile("a.txt", "utf-8", function(err,data) {
+            console.log("before resolve");
+            resolve(data);
+        });
+    })
+}
+// callback function to call
+function onDone(data) {
+    console.log(data)
+}
+var a = readFile()
+console.log(a); //output Promise{ <pending> }
+a.then(onDone);
+
+Promise : It is just a class that makes callbacks and async functions slightly more readable.
+Once created, it need to be passed in a function as the first argument which has resolve as the first argument.
+.then get called whenever the async function resolves.
+
+Async/await 
+Still uses callbacks/Promises 
+Await keyword used inside an async function
+Await keyword used when we want to pause execution until something completes.
+It’s like saying “stop what you’re doing right now and wait”.
+Every async function returns a promise. If it doesn’t explicitly return a promise, JavaScript automatically wraps the code block in a promise.

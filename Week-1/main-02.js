@@ -106,46 +106,82 @@ function sub(a,b){
 const value = calculateArithmetic(1,2,sub);
 console.log("the value is : " + value);
 
-// setTimeout and setInterval is also a callbacks
 function greet() {
     console.log('Hello World!');
 }
-function greetAlien() {
-    console.log('Greetings Earthling!');
-}
-setTimeout(greet, 3*1000);
-setInterval(greetAlien,2*1000);
+// Example of setTimeout and setInterval
+// function greetAlien() {
+//     console.log('Greetings Earthling!');
+// }
+// setTimeout(greet, 3 * 1000);
+// setInterval(greetAlien, 2 * 1000);
 
-// introduce a asynchronous function using setTimeout
+// introduce an asynchronous function using setTimeout
 function findSum(n) {
-    let ans=0;
-    for (let i=0; i<n; i++) {
-        ans +=i;
+    let ans = 0;
+    for (let i = 0; i <= n; i++) {
+        ans += i;
     }
     return ans;
 }
 function findSumTill100() {
     console.log(findSum(100));
 }
-setTimeout(findSum(100))
+setTimeout(() => {
+    findSumTill100(); // Corrected to call the function inside setTimeout
+}, 0); // Added the time parameter (0 milliseconds) for setTimeout
+
 console.log("hello js");
 
-// introduce the async fs.readFile 
+// introduce the async fs.readFile
 const fs = require('fs');
-fs.readFile("a.txt","utf-8",function(err,data) {
+fs.readFile("a.txt", "utf-8", function(err, data) {
+    if (err) {
+        console.error(err);
+        return;
+    }
     console.log(data);
 });
 console.log("This is a message");
 
-// Asynch task example 
+// Asynchronous task example
 function printHelloWorld() {
     console.log("hello world")
 }
 
 setTimeout(printHelloWorld, 5000);
 
-let ans = 0;
-for (let i = 1; i<=5; i++) {
-    ans = ans + i
+let res = 0; // Initialize ans variable
+for (let i = 1; i <= 5; i++) {
+    res = res + i;
 }
-console.log(ans);
+console.log(res);
+
+// Promise class
+var a = new Promise(function(resolve) {
+    setTimeout(function() {
+        resolve(4 + 6); // this will be passed to then block
+    }, 1000);
+});
+
+function callback(value) {
+    console.log(value); // Modified to log the resolved value
+}
+a.then(callback); // Modified to pass the callback function to then block
+
+// Example of Async/await syntax
+function AsyncFunction() {
+    let p = new Promise(function(resolve) {
+        setTimeout(function() {
+        resolve("hi there")
+        },3000)
+    });
+    return p;
+}
+async function main() {
+    // no callbacks , no .then syntax
+    const val=await AsyncFunction(); //same as saying .then syntax
+    console.log("hi there-1");
+}
+main();
+console.log("after main");
