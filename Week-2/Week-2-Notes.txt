@@ -1,0 +1,16 @@
+// Async funstions
+JS thread does not have access to everything immediately
+There are some tasks it needs to wait for
+Example:
+reading a file
+sending a network requests
+a deliberate timeout
+Event-loop: A single-threaded event loop that handles all the asynchronous operations. It waits for events from different sources (file, network...) and executes callback
+
+The cases that uses asynchronous call mostly other than that use synchronous call
+1. Do a network call
+2. Read a file and send the content in response
+3. Sleep/wait for some time
+4. Database call
+
+Delegation of the task in one thread once the task is delegated then it uses another thread
