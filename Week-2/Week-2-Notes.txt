@@ -14,3 +14,10 @@ The cases that uses asynchronous call mostly other than that use synchronous cal
 4. Database call
 
 Delegation of the task in one thread once the task is delegated then it uses another thread
+
+Await:
+- It waits until the promise resolves or rejects
+- It returns control back to the caller
+- If the Promise gets resolved, Await will return the value from the Promise
+- If the Promise got rejected, await will throw an error
+
