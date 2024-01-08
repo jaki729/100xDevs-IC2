@@ -46,3 +46,7 @@ url are just like contacts in your phone
 in the end they map to an ip
 if you ever buy a url of your own you will need to point it, to the ip of your server.
 
+const port = process.env.PORT (its an environment variable)
+
+The body-parser module enables us to parse incomming request bodies in a middleware.
+Express.js server needs to know what type of data you are sending over the network so that it can parse it.
