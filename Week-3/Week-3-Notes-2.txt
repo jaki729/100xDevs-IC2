@@ -1,0 +1,21 @@
+Databases:
+browser------>backend->database
+user hits the backend 
+backendhits the database
+user does not have access to the database/cannot talk to the DB
+
+The varous types of database:
+Graph DB
+Vector DB
+SQL DB
+NoSQL DB
+
+MongoDB 
+creates database
+in each db it lets you create tables(collections)
+in each table, it lets you dump JSON data
+It is schemaless
+It scales well and is a decent choice for most use cases
+
+CRUD: CREATE, READ, UPDATE, DELETE
+

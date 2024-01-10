@@ -1,0 +1,120 @@
+They're essentially functions or processes that are executed between the incoming request and the server's response. 
+In the context of web servers or frameworks, they intercept and process HTTP requests.
+Middlewares:
+In frameworks like Express.js (for Node.js), middlewares can perform tasks like logging, authentication, data parsing, error handling, and more.
+They sit in the middle of the request-response cycle, allowing developers to modularize functionalities and apply them to specific routes 
+or globally across the application.
+Middleware functions have access to the request and response objects and can modify them, 
+terminate the request-response cycle, or pass control to the next middleware in the stack by calling the next() function.
+
+req:callback argument to the middleware function called next by conversation
+res:HTTP response argument to the middleware function, called res by conversation 
+next: HTTP request argument to the middleware function, called req by conversation
+what is app.use(express.json()): 
+It is a middleware function that is used to parse incoming requests with JSON payloads.
+
+Sample Example without middleware:
+const express = require('express')
+const app = express()
+app.get('/', (req,res) => {
+    res.send('Hello jaki')
+})
+app.listen(3000)
+
+Sample Example with middleware:
+const express = require('express')
+const app = express()
+const myLogger = function(req,res,next) {
+    console.log("logged")
+    next(); //calls the next middleware in the stack
+}
+app.use(myLogger)
+app.get('/', (req,res) => {
+    res.send('Hello jaki')
+})
+app.listen(3000)
+
+Zod: Schema declaration and validation library
+
+Authentication:
+To authenticate users you need to use sessions or tokens.
+Sessions are stored on the server side using cookies or local storage.
+
+fetch API:
+- fetch() returns a Promise that resolves to the Response object representing the response of the network request.
+The fetch API allows developers to make network requests from within JavaScript code running in a browser. 
+It makes it easier to asynchronously retrieve data from a resource provided by the same domain,
+subdomains, or third-party servers. The fetch function returns a Promise that resolves to
+a Response object representing the response to that request.
+
+Cyptograpy:
+Cryptography is the practice of manipulating data so that unauthorized parties cannot understand it.
+
+Hashing:
+Its a one way.
+A hash is a type of cryptographic checksum commonly used for data integrity verification and authentication purposes.
+
+Encryption:
+Its a two way. It can be decrypted using key.
+A hash function takes input data and produces a fixed-size output string called a "hash" or "message digest". 
+Hash functions are designed such that any change to the input results in a completely different value for the output. 
+In other words, any modification whatsoever will result in a completely different hash. 
+This means that even if an attacker manages to guess part of the original message, 
+they still won't be able to figure out the rest because each character in the resulting hash has been mapped independently of all others.
+
+HTTP vs HTTP2:
+In HTTP/1.x, every time a client opens a new connection to a web server, that counts as one TCP connection. 
+So if your website gets 50 concurrent users, you might end up with 50 TCP connections open at once. 
+That can lead to performance issues and higher latency. 
+On the other hand, HTTP/2 multiplexes requests over a single TCP connection, 
+which reduces the number of required connections and improves overall performance.
+
+JSON web tokens:
+JWTs are compact, URL-safe means for securely transmitting information between parties as a compact, 
+self-contained method for securely transmitting information between parties as a simple object. 
+This can be used for authentication, information exchange, or as a data structure.
+It gets stored in the browser.
+First converts passwd into hash then backend checks happen are these credintials correct, if yes
+then it returns a JWT token to client and client stores in local storage. The backend always veryfies 
+is the jwt correct, if yes then lets user to access  the certain features of that web application.
+
+Local Storage:
+A place in your browser where you can store some data, which includes:
+Authentication tokens, User language preference and User theme preference.
+
+Web Storage provides mechanisms to store data persistently in the user's browser.
+
+Session storage:
+sessionStorage is similar to Web Storage but only stores data while the browser is open.
+
+MongoDB:
+NoSQL database designed to work with JSON-like documents with dynamic structures rather than fixed schema.
+
+PostgreSQL:
+An open-source relational database management system emphasizing extensibility and SQL compliance.
+
+Authentication:
+JWT to create tokens
+user gets back a token after the signin request
+user sends back tokens in all authenticated requests
+
+Axios:
+Promise based HTTP client for the browser and Node.js
+example:
+axios.get('/users')
+.then(response => {
+    console.log(response);
+    })
+    .catch((error) => {
+        console.log(error);
+        });
+
+Await:
+The await keyword lets us pause and wait until an asynchronous operation finishes before continuing.
+await is used when we have something async like fetch() or reading from a file.
+Syntax: const result = await promise;
+
+Async/Await:
+It’s not about making JavaScript slower or faster, it’s more about how we write our 
+code so that it looks synchronous even though underneath there are still promises being resolved.
+
