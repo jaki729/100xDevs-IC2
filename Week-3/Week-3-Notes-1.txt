@@ -97,6 +97,10 @@ Authentication:
 JWT to create tokens
 user gets back a token after the signin request
 user sends back tokens in all authenticated requests
+JWT
+-Generate(Sign)
+-Decode
+-verify
 
 Axios:
 Promise based HTTP client for the browser and Node.js

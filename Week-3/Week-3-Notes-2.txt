@@ -1,3 +1,16 @@
+Try Catch - throwing and catching errors in JS
+function getLength(name) {
+    return name.length;
+}
+try {
+    const ans= getLength();
+    console.log(ans);
+} catch(e) {
+    console.log("Errorcatch");
+}
+console.log("hi there!");
+
+
 Databases:
 browser------>backend->database
 user hits the backend 
