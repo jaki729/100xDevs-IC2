@@ -1,0 +1,8 @@
+DOM-:
+Document Object Model
+=================
+This document describes the structure and methods of a simple implementation of the Document Object Model (DOM).
+The Document Object Model (DOM) is a programming interface for web documents. 
+It represents the structure of a document and allows programmers to manipulate the content, structure, and style of a document programmatically. 
+The DOM enables developers to build dynamic websites with code that interacts with the contents of an HTML page in a consistent manner regardless of how the underlying markup changes.
+It represents the structure of a document by providing objects that reflect the contents and functionality of the document.
