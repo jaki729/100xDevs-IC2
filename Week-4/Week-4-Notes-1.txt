@@ -33,3 +33,12 @@ To resolve CORS errors, you might need to:
 - Use techniques like JSONP or server-side proxies if direct communication is not possible.
 
 It's important to note that CORS is a security feature that protects users, and circumventing it should be done carefully and only when absolutely necessary.
+
+Debouncing:
+- A debounced function will only be executed at most once within a certain time frame.
+- It can be useful when combined with user input events, such as keypresses or scroll events
+Throttling:
+- Throttled functions will execute at regular intervals, regardless of how many times they were called.
+- This technique can be used to limit the rate at which an event handler function executes in response to
+a particular event. For example, throttling a scroll event handler could ensure that the associated action
+is performed no more than every few seconds.
