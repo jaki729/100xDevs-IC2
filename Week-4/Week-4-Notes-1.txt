@@ -15,3 +15,21 @@ USE js to make the website dynamic
 using <script> tag
 
 A function is async if it returns a promise or have the await inside it.
+
+CORS stands for Cross-Origin Resource Sharing. It is a security feature implemented by web browsers to restrict webpages from making requests to a different domain than the one that served the original web page. The same-origin policy is a security measure that helps prevent malicious websites from making requests on behalf of a user to a different domain, possibly leading to sensitive information exposure.
+
+A CORS error occurs when a web page running at one origin (domain) tries to request resources (like data, fonts, or scripts) from a different origin, and the browser blocks that request due to security reasons. The browser sends an HTTP request with an "Origin" header to the server hosting the resource, and the server must include the appropriate CORS headers in its response to indicate whether the request is allowed or not.
+
+Common reasons for CORS errors include:
+
+1. Different Origins: The requesting and the target domains are different.
+2. Lack of CORS Headers: The server does not include the necessary CORS headers in its response.
+3. Invalid CORS Configuration: The server's CORS configuration may not allow the specific origin of the requesting site.
+
+To resolve CORS errors, you might need to:
+
+- Ensure the server is configured to include the proper CORS headers in its responses.
+- Check if the server allows requests from the origin of your web page.
+- Use techniques like JSONP or server-side proxies if direct communication is not possible.
+
+It's important to note that CORS is a security feature that protects users, and circumventing it should be done carefully and only when absolutely necessary.

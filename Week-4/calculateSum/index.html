@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calculator</h1>
+
+  <label for="num1">Enter First Number:</label>
+  <input type="number" id="num1" placeholder="Enter first number">
+
+  <label for="num2">Enter Second Number:</label>
+  <input type="number" id="num2" placeholder="Enter second number">
+
+  <button onclick="calculateSum()">Calculate Sum</button>
+  <div id="sumResult"></div>
+
+  <br>
+
+  <label for="principal">Enter Principal Amount:</label>
+  <input type="number" id="principal" placeholder="Enter principal amount">
+
+  <label for="rate">Enter Interest Rate:</label>
+  <input type="number" id="rate" placeholder="Enter interest rate">
+
+  <label for="time">Enter Time (in years):</label>
+  <input type="number" id="time" placeholder="Enter time in years">
+
+  <button onclick="calculateInterest()">Calculate Interest</button>
+  <div id="interestResult"></div>
+
+  <script>
+    async function calculateSum() {
+      const num1 = document.getElementById('num1').value;
+      const num2 = document.getElementById('num2').value;
+
+      try {
+        const response = await fetch(`http://localhost:8080/sum?a=${num1}&b=${num2}`);
+        const result = await response.text();
+        document.getElementById('sumResult').innerText = `Sum: ${result}`;
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    async function calculateInterest() {
+      const principal = document.getElementById('principal').value;
+      const rate = document.getElementById('rate').value;
+      const time = document.getElementById('time').value;
+
+      try {
+        const response = await fetch(`http://localhost:8080/interest?principal=${principal}&rate=${rate}&time=${time}`);
+        const result = await response.json();
+        document.getElementById('interestResult').innerText = `Total: ${result.total}, Interest: ${result.interest}`;
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+<!-- <html>
+    <script>
+        function populateDiv() {
+            const a = document.getElementById("first number").value;
+            const b = document.getElementById("second number").value;
+            const element = document.getElementById("finalSum")
+            //fetch
+            fetch('http://localhost:8000/add?a='+a+'&b='+b)
+            .then(function(response) {
+                response.text()
+                .then(function(data){
+                    document.getElementById("finalSum").innerHTML=data;
+                })
+            });
+        }
+            // async
+            async function populateDiv2() {
+                const a = document.getElementById("first number").value;
+                const b = document.getElementById("second number").value;
+                const response = await fetch('http://localhost:8000/add?a='+a+'&b='+b);
+                const ans = await response.text();
+                document.getElementById("finalSum").innerHTML=ans;
+            }
+    </script>
+    <body>
+        <input id="first number" type="text" placeholder="First number "> <br>
+        <input id="second number" type="text" placeholder="Second Number "><br>
+        <button onclick="populateDiv()" >calculate Sum</button> <br>
+        <div id="finalSum"></div>
+    </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Sum</title>
+</head>
+<body>
+    <input type="text" id="firstNumberInput" placeholder="First-number"><br>
+    <input type="text" id="secondNumberInput" placeholder="Second-number"><br>
+    <div id="finalSum"></div>
+
+    <script>
+        function calculateSum() {
+            const firstNumber = parseFloat(document.getElementById('firstNumberInput').value) || 0;
+            const secondNumber = parseFloat(document.getElementById('secondNumberInput').value) || 0;
+
+            const sum = firstNumber + secondNumber;
+            const element = document.getElementById("finalSum");
+            element.innerHTML = "Sum: " + sum;
+        }
+
+        // Add event listeners to input fields to recalculate the sum dynamically
+        document.getElementById('firstNumberInput').addEventListener('input', calculateSum);
+        document.getElementById('secondNumberInput').addEventListener('input', calculateSum);
+    </script>
+</body>
+</html> -->
