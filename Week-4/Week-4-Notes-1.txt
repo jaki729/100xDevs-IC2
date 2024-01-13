@@ -6,3 +6,12 @@ The Document Object Model (DOM) is a programming interface for web documents.
 It represents the structure of a document and allows programmers to manipulate the content, structure, and style of a document programmatically. 
 The DOM enables developers to build dynamic websites with code that interacts with the contents of an HTML page in a consistent manner regardless of how the underlying markup changes.
 It represents the structure of a document by providing objects that reflect the contents and functionality of the document.
+
+
+Dynamic 
+-changing the elements on the website once the website is loaded
+-actually calculating the sum based on the inouts and rendering it on the screen
+USE js to make the website dynamic 
+using <script> tag
+
+A function is async if it returns a promise or have the await inside it.
