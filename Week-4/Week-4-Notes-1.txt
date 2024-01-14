@@ -7,7 +7,13 @@ It represents the structure of a document and allows programmers to manipulate t
 The DOM enables developers to build dynamic websites with code that interacts with the contents of an HTML page in a consistent manner regardless of how the underlying markup changes.
 It represents the structure of a document by providing objects that reflect the contents and functionality of the document.
 
+document.createElement
+document.appendElement
+element.setAttribute
+element.children
 
+DOM manipulation is very hardr to write as a developer 
+making dynamic websites , with the primitives that DOM provides you is very hard.
 Dynamic 
 -changing the elements on the website once the website is loaded
 -actually calculating the sum based on the inouts and rendering it on the screen
@@ -39,6 +45,7 @@ Debouncing:
 - It can be useful when combined with user input events, such as keypresses or scroll events
 Throttling:
 - Throttled functions will execute at regular intervals, regardless of how many times they were called.
-- This technique can be used to limit the rate at which an event handler function executes in response to
+- This technique ca.n be used to limit the rate at which an event handler function executes in response to
 a particular event. For example, throttling a scroll event handler could ensure that the associated action
 is performed no more than every few seconds.
+
